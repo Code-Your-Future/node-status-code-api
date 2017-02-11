@@ -6,7 +6,7 @@ const statusCodes = require('../data/status-codes.json');
 describe('Status codes API', () => {
 
 	describe('GET `/code/:code`', () => {
-		it('should take a status code as a URL parameter and return JSON data for that status code', () => {
+		it.only('should take a status code as a URL parameter and return JSON data for that status code', () => {
 			return request(server)
 				.get('/code/200')
 				.expect(200)
@@ -17,7 +17,7 @@ describe('Status codes API', () => {
 				});
 		});
 
-		xit('should respond with \'404 Not Found\' if there is no such code in the data', () => {
+		it('should respond with \'404 Not Found\' if there is no such code in the data', () => {
 			return request(server)
 				.get('/code/600')
 				.expect(404);
@@ -25,7 +25,7 @@ describe('Status codes API', () => {
 	});
 
 	describe('GET `/code`', () => {
-		xit('should have a GET `/code` route to provide all the status code data', () => {
+		it('should have a GET `/code` route to provide all the status code data', () => {
 			return request(server)
 				.get('/')
 				.expect(200)
