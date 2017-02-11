@@ -6,7 +6,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/server.spec.js",
+    "test": "node -v && mocha test/server.spec.js",
     "start": "nodemon server.js"
   },
   "devDependencies": {
