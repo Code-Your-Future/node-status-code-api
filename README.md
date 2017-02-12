@@ -48,4 +48,4 @@ However, when you start work on this project, you should see something like:
      Error: expected 200 "OK", got 404 "Not Found"
 ```
 
-The failing tests should give you some ideas about how to proceed, so read them closely.
+These failing tests should give you some ideas about how to proceed, so read them closely.
