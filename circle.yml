@@ -5,7 +5,7 @@ general:
 
 test:
   override:
-    - npm ci
+    - npm run ci
 
 machine:
   node:
