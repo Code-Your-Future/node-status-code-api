@@ -30,5 +30,5 @@ Status code API
   ✓ has a '/:code' route
   ✓ returns the correct data from the 'statusCode' array
 
-3 passing (36ms)
+2 passing (36ms)
 ```
