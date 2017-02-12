@@ -6,7 +6,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npm run lint && mocha ./test/**/*.spec.js",
+    "test": "mocha ./test/**/*.spec.js",
+    "ci": "npm run lint && npm test",
     "start": "nodemon server.js",
     "lint": "eslint ."
   },
