@@ -10,7 +10,7 @@ npm test
 
 ## Goal
 
-The goal is to write an API that serves JSON data containing information about different HTTP status codes. For example, when you run `npm start` and navigate to http://localhost:8080/200, you should see a JSON file that tells you that the HTTP status code `200` means `OK`. Likewise, at http://localhost:8080/503 you should see a JSON file that tells you that the HTTP status code `503` means `Servive Unavailable`.
+The goal is to write an API that serves JSON data containing information about different HTTP status codes. For example, when you run `npm start` and navigate to [http://localhost:8080/200](http://localhost:8080/200), you should see a JSON file that tells you that the HTTP status code `200` means `OK`. Likewise, at [http://localhost:8080/503](http://localhost:8080/503) you should see a JSON file that tells you that the HTTP status code `503` means `Servive Unavailable`.
 
 `/data/status-codes.json` is a JSON file that contains information about all the codes. The file has already been required into the `server.js` file (this is the file where you will be doing your work) and is available as the `statusCode` array. You will need to fetch the correct information from this array.
 
