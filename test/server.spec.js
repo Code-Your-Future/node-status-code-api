@@ -11,7 +11,7 @@ describe('Status codes API', () => {
 			.expect(200);
 	});
 
-	it('returns the correct data from the \'statusCode\' array', () => {
+	it('returns the correct data from the \'statusCodes\' array', () => {
 		const status = statusCodes[Math.floor(Math.random() * statusCodes.length)];
 		return request(server)
 			.get(`/${status.code}`)
