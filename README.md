@@ -49,3 +49,7 @@ However, when you start work on this project, you should see something like:
 ```
 
 These failing tests should give you some ideas about how to proceed, so read them closely.
+
+## Homework
+
+Homework is described in the [Code-Your-Future/node-status-code-website](https://github.com/Code-Your-Future/node-status-code-website#homework) README.
