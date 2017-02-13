@@ -14,6 +14,21 @@ app.get('/code/:code', (req, res) => {
   }
 });
 
+app.get('/code', (req, res) => {
+  const allCode = [];
+  statusCodes.map((status) => {
+    for(key in status){
+      delete status.description;
+      delete status.spec_title;
+      delete status.spec_href;
+      status['image'] = 'https://http.cat/' + status.code;
+    }
+    allCode.push(status);
+  });
+  res.json(allCode);
+});
+
+
 app.listen(3000);
 
 module.exports = app;
