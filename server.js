@@ -21,7 +21,7 @@ app.get('/code', (req, res) => {
       delete status.description;
       delete status.spec_title;
       delete status.spec_href;
-      status['image'] = 'https://http.cat/' + status.code;
+      status['image'] = 'https://http.cat/' + status.code + '.jpg';
     }
     allCode.push(status);
   });
