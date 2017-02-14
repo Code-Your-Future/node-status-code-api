@@ -11,7 +11,7 @@ app.get('/code', (req, res) => {
     const obj = {
       code: value.code,
       phrase: value.phrase,
-      img: `https://http.cat/ ${value.code} .jpg`,
+      image: `https://http.cat/${value.code}.jpg`,
     };
     return obj;
   });
