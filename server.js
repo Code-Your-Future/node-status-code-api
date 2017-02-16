@@ -2,6 +2,7 @@ const express = require('express');
 const statusCodes = require('./data/status-codes.json');
 
 const app = express();
+
 app.get('/code/:code', (req, res) => {
   const code = req.params.code;
   const codeResult = statusCodes.filter((statusContent) => { 
@@ -15,19 +16,10 @@ app.get('/code/:code', (req, res) => {
 });
 
 app.get('/code', (req, res) => {
-  const allCode = [];
-  statusCodes.map((status) => {
-    for(key in status){
-      delete status.description;
-      delete status.spec_title;
-      delete status.spec_href;
-      status['image'] = 'https://http.cat/' + status.code + '.jpg';
-    }
-    allCode.push(status);
-  });
+  const allCode = statusCodes.map(({code, phrase}) => (
+    {code, phrase, image: 'https://http.cat/' + code + '.jpg'} ));
   res.json(allCode);
 });
-
 
 app.listen(3000);
 
