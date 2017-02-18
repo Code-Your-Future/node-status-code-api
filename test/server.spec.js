@@ -7,8 +7,8 @@ describe('Status codes API', () => {
 
 	it('has a \'/code/:code\' route', () => {
 		return request(server)
-			.get('/code/200')
-			.expect(200);
+			.get('/code/banana')
+			.expect(404);
 	});
 
 	it('returns the correct data from the \'statusCodes\' array', () => {
