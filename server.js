@@ -18,13 +18,14 @@ app.get('/code', (req, res) => {
   res.json(allCode);
 });
 
-app.get('/search/', (req, res) => {
-  const query = req.query.phrase;  
+app.get('/search/:value', (req, res) => {
+  const queryValue = req.params.value;
   const codeResult = statusCodes.filter((statusContent) => { 
-    return statusContent.phrase === query;
-  });
-  (codeResult.length === 0) ? res.sendStatus('404') : res.json(codeResult[0]);
+    return statusContent.phrase.indexOf(queryValue) !== -1;
+  });  
+  res.json(codeResult);
 });
+
 app.listen(3000);
 
 module.exports = app;
